@@ -28,8 +28,8 @@ const HomeScreen = ({navigation}) => {
                 _id : "112",
                 Name : "BikeScreen", 
                 Image : BIKE,
-                Title : "Order Food",
-                description : "We will deliver you food"
+                Title : "Uber Bike",
+                description : "Feasibilty"
             },
     ]
     const renderItem = ({item})=>{

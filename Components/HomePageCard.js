@@ -5,7 +5,7 @@ import tw from 'tailwind-react-native-classnames'
 const HomePageCard = (props) => {
     return (
        <TouchableOpacity style={tw`m-4`} onPress={props.onPress}>
-           <View style={tw`p-2 bg-gray-100`}>
+           <View style={tw`p-2 bg-gray-200 rounded` }>
 
                 <Image
                     style={{width : 150 , height : 150}}
