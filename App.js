@@ -6,25 +6,29 @@ import { store } from './store';
 import HomeScreen from './Screens/HomeScreen';
 import RideScreen from './Screens/RideScreen';
 import FoodScreen from './Screens/FoodScreen';
-import BikesScreen from './Screens/BikesScreen';
+import BikeScreen from './Screens/BikeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Header } from 'react-native/Libraries/NewAppScreen';
 export default function App() {
-  const stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator();
   return (
     <View style={styles.container} >
       <Provider store={store}>
-      <StatusBar style="auto" />
-      <SafeAreaView>
-        <stack.Navigator>
-            <stack.Screen name="Home"  component={HomeScreen} />
-            <stack.Screen name="RideScreen" component={RideScreen} />
-            <stack.Screen name="FoodScreen" component={FoodScreen} />
-            <stack.Screen name="BikeScreen" component={BikeScreen} />
-        </stack.Navigator>
+      {/* <StatusBar style="auto" /> */}
+      {/* <SafeAreaView>
+         */}
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen name="Home"  component={HomeScreen} header={null}  />
+            <Stack.Screen name="RideScreen" component={RideScreen} />
+            <Stack.Screen name="FoodScreen" component={FoodScreen} />
+            <Stack.Screen name="BikeScreen" component={BikeScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>
           
       
-  </SafeAreaView>
+  {/* </SafeAreaView> */}
       </Provider>
 
     </View>
