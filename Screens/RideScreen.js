@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 const RideScreen = () => {
     return (
         <View>
-            <Text>RIDEWs Screne</Text>
+            <Text style={{flex : 1 , textCenter: 'center' , alignItem : 'center'}}>RIDES Screne</Text>
         </View>
     )
 }

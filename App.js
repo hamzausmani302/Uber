@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar  } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet,SafeAreaView, Text, View } from 'react-native';
+import { StyleSheet,SafeAreaView, Text, View, Dimensions } from 'react-native';
 import { Provider  } from 'react-redux';
 import { store } from './store';
 import HomeScreen from './Screens/HomeScreen';
@@ -15,29 +15,31 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     
-    <NavigationContainer >
+   
     <View style={styles.container} >
+     
       <Provider store={store}>
       {/* <StatusBar style="auto" /> */}
       {/* <SafeAreaView>
          */}
+       <NavigationContainer >
           <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen style={{backgroundColor:'black'}} name="Home"  component={HomeScreen} options={{headerShown: false}} />
+            <Stack.Screen style={{backgroundColor:'white'}} name="Home"  component={HomeScreen} options={{headerShown: false}} />
             <Stack.Screen name="RideScreen" component={RideScreen} options={{headerShown: false}} />
             <Stack.Screen name="FoodScreen" component={FoodScreen}  options={{headerShown: false}}/>
             <Stack.Screen name="BikeScreen" component={BikeScreen}  options={{headerShown: false}}/>
           </Stack.Navigator>
         
-          
+          </NavigationContainer>    
       
   {/* </SafeAreaView> */}
       </Provider>
-
+      
     </View>
-    </NavigationContainer>
+    
   );
 }
 
 const styles = StyleSheet.create({
-  container: {flex:1 }
+  container: {flex:1, backgroundColor:'white' , height : 600 }
 });
